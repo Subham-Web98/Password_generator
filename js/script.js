@@ -31,7 +31,7 @@ const generatePassword = (password = "") => {
     return generatePassword(password);
   }
   passwordBox.innerHTML = password.slice(0, passRange.value);
-  
+  navigator.clipboard.writeText(password.slice(0, passRange.value));
 };
 generateBtn.addEventListener("click", () => {
   generatePassword();
